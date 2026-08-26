@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಶ್ರೀ ವೈಷ್ಣವ ಸಂಪ್ರದಾಯಾನುಸಾರ ಯಜುರ್ ಉಪಾಕರ್ಮ ವಿಧಾನ (೨೦೨೬)</title>
+    <style>
+        :root {
+            --primary: #8b1e0f;
+            --primary-light: #fbf5ef;
+            --accent: #b45309;
+            --text-dark: #1f2937;
+            --text-muted: #4b5563;
+            --border-color: #e5e7eb;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Tunga', 'Nirmala UI', 'Kedage', 'Mallige', 'Noto Sans Kannada', system-ui, -apple-system, sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: #f3f4f6;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #8b1e0f 0%, #b45309 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .header h2 {
+            font-size: 20px;
+            font-weight: 500;
+            opacity: 0.95;
+            margin-bottom: 12px;
+        }
+
+        .header .meta {
+            font-size: 14px;
+            opacity: 0.85;
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 20px;
+        }
+
+        .summary-card {
+            background-color: #fef8ee;
+            border-left: 5px solid var(--accent);
+            margin: 24px;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .summary-card h3 {
+            color: var(--accent);
+            font-size: 17px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px 15px;
+            font-size: 15px;
+        }
+
+        .summary-grid div {
+            color: var(--text-dark);
+        }
+
+        .summary-grid strong {
+            color: var(--primary);
+        }
+
+        .content {
+            padding: 0 24px 30px 24px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            background: #ffffff;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 20px;
+            background-color: var(--primary);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            font-size: 15.5px;
+            text-align: justify;
+        }
+
+        .instruction {
+            color: var(--text-muted);
+            background: #fdfaf6;
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: 1px dashed #e2d9cf;
+            margin-bottom: 14px;
+            font-size: 14.5px;
+        }
+
+        .mantra-box {
+            background-color: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 14px 18px;
+            margin: 14px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 15.5px;
+            line-height: 1.9;
+        }
+
+        .highlight-fill {
+            color: #8b1e0f;
+            font-weight: 700;
+            background: #ffe3d1;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+
+        .tarpana-list {
+            list-style: none;
+            counter-reset: tarpana-counter;
+            margin: 16px 0;
+        }
+
+        .tarpana-list li {
+            counter-increment: tarpana-counter;
+            position: relative;
+            padding: 8px 12px 8px 38px;
+            margin-bottom: 8px;
+            background: #fafaf9;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            font-size: 15px;
+        }
+
+        .tarpana-list li::before {
+            content: counter(tarpana-counter);
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--accent);
+            color: #ffffff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fafafa;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>ಶ್ರೀ ವೈಷ್ಣವ ಸಂಪ್ರದಾಯಾನುಸಾರ</h1>
+        <h2>ಯಜುರ್ ಉಪಾಕರ್ಮ ವಿಧಾನ (೨೦೨೬)</h2>
+        <div class="meta">ಸಂಗ್ರಹ: ಕನ್ನಡ ಅಯ್ಯಂಗಾರರು | ಶ್ರಾವಣ ಪೂರ್ಣಿಮಾ ವಿಶೇಷ</div>
+    </div>
+
+    <div class="summary-card">
+        <h3>೨೦೨೬ರ ಉಪಾಕರ್ಮ ಸಂಕಲ್ಪ ವಿವರಗಳು (ಆಗಸ್ಟ್ ೨೭, ೨೦೨೬):</h3>
+        <div class="summary-grid">
+            <div><strong>ಸಂವತ್ಸರ:</strong> ಪರಾಭವ</div>
+            <div><strong>ಅಯನ:</strong> ದಕ್ಷಿಣಾಯನ</div>
+            <div><strong>ಋತು:</strong> ವರ್ಷ ಋತು</div>
+            <div><strong>ಮಾಸ:</strong> ಶ್ರಾವಣ ಮಾಸ</div>
+            <div><strong>ಪಕ್ಷ:</strong> ಶುಕ್ಲ ಪಕ್ಷ</div>
+            <div><strong>ತಿಥಿ:</strong> ಪೌರ್ಣಮಾಸ್ಯಾಂ (ಪೂರ್ಣಿಮಾ)</div>
+            <div><strong>ವಾಸರ:</strong> ಬೃಹಸ್ಪತಿವಾಸರ (ಗುರುವಾರ)</div>
+            <div><strong>ನಕ್ಷತ್ರ:</strong> ಶ್ರವಣ ನಕ್ಷತ್ರ</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Section 1 -->
+        <div class="section">
+            <h3 class="section-title">೧. ಕಾಮೋಕಾರ್ಷೀನ್ಮಂತ್ರ ಜಪ</h3>
+            <div class="instruction">
+                ಕೈ ಕಾಲುಗಳನ್ನು ತೊಳೆದುಕೊಂಡು, ಎರಡು ಬಾರಿ ಆಚಮನ ಮಾಡಿ, ಒಂದು ಪ್ರಾಣಾಯಾಮ ಮಾಡಿ, ಈ ಕೆಳಗಿನ ಸಂಕಲ್ಪ ಮಾಡಬೇಕು.
+            </div>
+
+            <div class="mantra-box">
+                ಶ್ರೀಮಾನ್ ವೇಂಕಟನಾಥಾರ್ಯಃ ಕವಿತಾರ್ಕಿಕ ಕೇಸರೀ |<br>
+                ವೇದಾಂತಾಚಾರ್ಯ ವರ್ಯೋ ಮೇ ಸನ್ನಿಧತ್ತಾಂ ಸದಾಹೃದಿ ||<br>
+                ಗುರುಭ್ಯಶ್ಚ ಸದ್ಗುರುಭ್ಯಶ್ಚ ನಮವಾಕ ಮಧೀಸ್ಮಹೇ |<br>
+                ವೃಣೀಸ್ಮಹೇ ಚ ತತ್ರಾದ್ಯೌ ದಂಪತೀಂ ಜಗತಾಂ ಪತೀ ||<br>
+                ಸರ್ವೇಶ ಭೀತೇನ ಮಯಾ ಸ್ವೀಯೈಃ ಸರ್ವಪ್ರಚ್ಛದೈಃ |<br>
+                ವಿಧಾತುಂ ಪ್ರೀತಮಾತ್ಮಾನಂ ಶ್ರೀಮಾನ್ ಪ್ರಕರತೇಸ್ವಯಂ ||<br>
+                ಶುಕ್ಲಾಂಬರಧರಂ ವಿಷ್ಣುಂ ಶಶಿವರ್ಣಂ ಚತುರ್ಭುಜಂ |<br>
+                ಪ್ರಸನ್ನ ವದನಂ ಧ್ಯಾಯೇತ್ ಸರ್ವ ವಿಘ್ನೋಪಶಾಂತಯೇ ||<br>
+                ಯಸ್ಯದ್ವಿರದ ವಕ್ತ್ರಾದ್ಯಾಃ ಪಾರಿಷದ್ಯಾಃ ಪರಶ್ಶತಂ |<br>
+                ವಿಘ್ನಂ ನಿಘ್ನಂತಿ ಸತತಂ ವಿಶ್ವಕ್ಸೇನಂ ತಮಾಶ್ರಯೇ ||
+            </div>
+
+            <div class="instruction">
+                ಎಂದು ಪ್ರಾರ್ಥಿಸಿ, ಎಡ ಅಂಗೈ ಮೇಲೆ ಬಲ ಅಂಗೈಯನ್ನು ಇಟ್ಟು, ಸೇರಿಸಿದ ಎರಡೂ ಕೈಗಳನ್ನು ಬಲ ತೊಡೆಯ ಮೇಲೆ ಇಟ್ಟುಕೊಂಡು ಈ ರೀತಿ ಸಂಕಲ್ಪ ಹೇಳಬೇಕು:
+            </div>
+
+            <div class="mantra-box">
+                ಹರಿಃ ಓಂ ತತ್ ಶ್ರೀ ಗೋವಿಂದ ಗೋವಿಂದ ಗೋವಿಂದ |<br>
+                ಅಸ್ಯ ಶ್ರೀ ಭಗವತೋ ಮಹಾಪುರುಷಸ್ಯ ಶ್ರೀ ವಿಷ್ಣೋರಾಜ್ಞಯಾ, ಪ್ರವರ್ತಮಾನಸ್ಯ, ಅದ್ಯ ಬ್ರಹ್ಮಣಃ, ದ್ವಿತೀಯ ಪರಾರ್ಧೇ, ಶ್ರೀ ಶ್ವೇತವರಾಹ ಕಲ್ಪೇ, ವೈವಸ್ವತ ಮನ್ವಂತರೇ, ಕಲಿಯುಗೇ, ಪ್ರಥಮ ಪಾದೇ, ಜಂಬೂ ದ್ವೀಪೇ, ಭಾರತ ವರ್ಷೇ, ಭರತ ಖಂಡೇ, ಶಕಾಬ್ದೇ, ಅಸ್ಮಿನ್ ವರ್ತಮಾನೇನ ವ್ಯಾವಹಾರಿಕೇ ಚಾಂದ್ರಮಾನೇನ ಪ್ರಭವಾದಿ ಷಷ್ಠಿ ಸಂವತ್ಸರಾಣಾಂ ಮಧ್ಯೇ,<br>
+                <span class="highlight-fill">ಶ್ರೀ ಪರಾಭವ ನಾಮ ಸಂವತ್ಸರೇ, ದಕ್ಷಿಣಾಯನೇ, ವರ್ಷ ಋತೌ, ಶ್ರಾವಣ ಮಾಸೇ, ಶುಕ್ಲ ಪಕ್ಷೇ, ಪೌರ್ಣಮಾಸ್ಯಾಂ ಶುಭ ತಿಥೌ, ಬೃಹಸ್ಪತಿ ವಾಸರ ಯುಕ್ತಾಯಾಂ, ಶ್ರವಣ ನಕ್ಷತ್ರ ಯುಕ್ತಾಯಾಂ</span>, ಶುಭ ನಕ್ಷತ್ರ, ಶುಭ ಯೋಗ, ಶುಭ ಕರಣ, ಏವಂ ಗುಣ, ವಿಶೇಷಣ ವಿಶಿಷ್ಟಾಯಾಂ, ಅಸ್ಯಾಂ ಶುಭ ತಿಥೌ, <strong>ಕಾಮೋಕಾರ್ಷೀನ್ಮಂತ್ರ ಜಪಂ ಕರಿಷ್ಯೇ</strong>
+            </div>
+
+            <p>ಎಂದು ಹೇಳಿ, ಕೆಳಗಿನ ಮಂತ್ರವನ್ನು <strong>೧೦೮</strong> ಅಥವಾ <strong>೧೦೦೮</strong> ಬಾರಿ ಜಪಿಸಬೇಕು:</p>
+            <div class="mantra-box" style="text-align: center; font-weight: bold; color: var(--primary);">
+                ಓಂ ಕಾಮೋಕಾರ್ಷೀನ್ಮನ್ಯುರಕಾರ್ಷೀನ್ ನಮೋ ನಮಃ
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section">
+            <h3 class="section-title">೨. ಯಜ್ಞೋಪವೀತ ಧಾರಣ</h3>
+            <div class="instruction">
+                ಎರಡು ಬಾರಿ ಆಚಮನ ಮಾಡಿ, ಈ ಕೆಳಗೆ ಸೂಚಿಸಿದಂತೆ ಸಂಕಲ್ಪ ಮಾಡಬೇಕು:
+            </div>
+
+            <div class="mantra-box">
+                ಹರಿಃ ಓಂ ತತ್ ಶ್ರೀ ಗೋವಿಂದ ಗೋವಿಂದ ಗೋವಿಂದ |<br>
+                ಅಸ್ಯ ಶ್ರೀ ಭಗವತೋ ಮಹಾಪುರುಷಸ್ಯ ಶ್ರೀ ವಿಷ್ಣೋರಾಜ್ಞಯಾ, ಪ್ರವರ್ತಮಾನಸ್ಯ, ಅದ್ಯ ಬ್ರಹ್ಮಣಃ, ದ್ವಿತೀಯ ಪರಾರ್ಧೇ, ಶ್ರೀ ಶ್ವೇತವರಾಹ ಕಲ್ಪೇ, ವೈವಸ್ವತ ಮನ್ವಂತರೇ, ಕಲಿಯುಗೇ, ಪ್ರಥಮ ಪಾದೇ, ಜಂಬೂ ದ್ವೀಪೇ, ಭಾರತ ವರ್ಷೇ, ಭರತ ಖಂಡೇ, ಶಕಾಬ್ದೇ, ಅಸ್ಮಿನ್ ವರ್ತಮಾನೇನ ವ್ಯಾವಹಾರಿಕೇ ಚಾಂದ್ರಮಾನೇನ ಪ್ರಭವಾದಿ ಷಷ್ಠಿ ಸಂವತ್ಸರಾಣಾಂ ಮಧ್ಯೇ,<br>
+                <span class="highlight-fill">ಶ್ರೀ ಪರಾಭವ ನಾಮ ಸಂವತ್ಸರೇ, ದಕ್ಷಿಣಾಯನೇ, ವರ್ಷ ಋತೌ, ಶ್ರಾವಣ ಮಾಸೇ, ಶುಕ್ಲ ಪಕ್ಷೇ, ಪೌರ್ಣಮಾಸ್ಯಾಂ ಶುಭ ತಿಥೌ, ಬೃಹಸ್ಪತಿ ವಾಸರ ಯುಕ್ತಾಯಾಂ, ಶ್ರವಣ ನಕ್ಷತ್ರ ಯುಕ್ತಾಯಾಂ</span>, ಶುಭ ನಕ್ಷತ್ರ, ಶುಭ ಯೋಗ, ಶುಭ ಕರಣ, ಏವಂ ಗುಣ, ವಿಶೇಷಣ ವಿಶಿಷ್ಟಾಯಾಂ, ಅಸ್ಯಾಂ ಶುಭ ತಿಥೌ, ಶ್ರೌತ ಸ್ಮಾರ್ತ ವಿಹಿತ ನಿತ್ಯ ಕರ್ಮಾನುಷ್ಠಾನ ಯೋಗ್ಯತಾ ಸಿದ್ಧ್ಯರ್ಥಂ ಬ್ರಹ್ಮ ತೇಜೋಬಲ ಸಿದ್ಧ್ಯರ್ಥಂ, ಚ <strong>ನೂತನ ಯಜ್ಞೋಪವೀತ ಧಾರಣಂ ಕರಿಷ್ಯೇ</strong>
+            </div>
+
+            <div class="instruction">
+                ಎಂದು ಹೇಳಿ, ಕುಕ್ಕುಟಾಸನದಲ್ಲಿ ಕುಳಿತುಕೊಂಡು ಯಜ್ಞೋಪವೀತವು ಬಲ ಅಂಗೈ ಮೇಲೆ ಎಡ ಅಂಗೈ ಕೆಳಗೆ, ಬೆರಳುಗಳ ಮಧ್ಯೆ ಬರುವಂತೆ, ಬ್ರಹ್ಮ ಗ್ರಂಥಿಯ ತುದಿಯು ಬಲ ಅಂಗೈ ಅಂಗುಷ್ಠದ ಕಡೆಗೆ ಇರುವಂತೆ ಇಟ್ಟುಕೊಂಡು:
+            </div>
+
+            <div class="mantra-box">
+                ಯಜ್ಞೋಪವೀತ ಧಾರಣ ಮಂತ್ರಸ್ಯ, ಬ್ರಹ್ಮರ್ಷಿಃ, ತ್ರಿಷ್ಟುಪ್ ಛಂದಃ,<br>
+                ವೇದಮಾತ್ರಾ ದೇವತಾಃ, ಯಜ್ಞೋಪವೀತ ಧಾರಣೇ ವಿನಿಯೋಗಃ |<br><br>
+                <strong>ಯಜ್ಞೋಪವೀತಂ ಪರಮಂ ಪವಿತ್ರಂ ಪ್ರಜಾಪತೇಃ ಯತ್ಸಹಜಂ ಪುರಸ್ತಾತ್ |<br>
+                ಆಯುಷ್ಯ ಮಗ್ರ್ಯಂ ಪ್ರತಿಮುಂಚ ಶುಭ್ರಂ ಯಜ್ಞೋಪವೀತಂ ಬಲಮಸ್ತು ತೇಜಃ ||</strong>
+            </div>
+
+            <p>ಎಂದು ಹೇಳಿ, ಉಪವೀತವಾಗಿ (ಎಡ ಭುಜದ ಮೇಲೆ ಬಲ ಪಕ್ಕಕ್ಕೆ ಬರುವಂತೆ) ಹಾಕಿಕೊಳ್ಳಬೇಕು.<br>
+            <em>(ಬ್ರಹ್ಮಚಾರಿಗಳು ಒಂದೇ ಒಂದು ಯಜ್ಞೋಪವೀತವನ್ನು ಹಾಕಿಕೊಳ್ಳಬೇಕು).</em></p>
+
+            <div class="instruction" style="margin-top: 15px;">
+                <strong>ಮದುವೆಯಾದವರು (ಗೃಹಸ್ಥರು) ಎರಡನೇ ಯಜ್ಞೋಪವೀತ ಧಾರಣ:</strong><br>
+                ಮದುವೆಯಾದವರು ಈ ಕೆಳಗಿನ ಸಂಕಲ್ಪ ಹೇಳಿ ಎರಡನೇ ಯಜ್ಞೋಪವೀತವನ್ನು ಧರಿಸಬೇಕು:
+            </div>
+
+            <div class="mantra-box">
+                <strong>ಗೃಹಸ್ಥಾಶ್ರಮಾಂಗ ಭೂತಂ, ದ್ವಿತೀಯ ಯಜ್ಞೋಪವೀತ ಧಾರಣಂ ಕರಿಷ್ಯೇ</strong><br><br>
+                ಯಜ್ಞೋಪವೀತ ಧಾರಣ ಮಂತ್ರಸ್ಯ, ಬ್ರಹ್ಮರ್ಷಿಃ, ತ್ರಿಷ್ಟುಪ್ ಛಂದಃ,<br>
+                ವೇದಮಾತ್ರಾ ದೇವತಾಃ, ಯಜ್ಞೋಪವೀತ ಧಾರಣೇ ವಿನಿಯೋಗಃ |<br><br>
+                <strong>ಯಜ್ಞೋಪವೀತಂ ಪರಮಂ ಪವಿತ್ರಂ ಪ್ರಜಾಪತೇಃ ಯತ್ಸಹಜಂ ಪುರಸ್ತಾತ್ |<br>
+                ಆಯುಷ್ಯ ಮಗ್ರ್ಯಂ ಪ್ರತಿಮುಂಚ ಶುಭ್ರಂ ಯಜ್ಞೋಪವೀತಂ ಬಲಮಸ್ತು ತೇಜಃ ||</strong>
+            </div>
+            <p>ಎಂದು ಹೇಳಿ ಉಪವೀತವಾಗಿ ಹಾಕಿಕೊಳ್ಳಬೇಕು. ಅನಂತರ ಆಚಮನ ಮಾಡಬೇಕು.</p>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section">
+            <h3 class="section-title">೩. ನವಕಾಂಡ ಋಷಿ ತರ್ಪಣ</h3>
+            <div class="instruction">
+                ಉತ್ತರಾಭಿಮುಖವಾಗಿ ನಿಂತು, ಎರಡು ಬಾರಿ ಆಚಮನ ಮಾಡಿ, ಈ ಕೆಳಗೆ ಸೂಚಿಸಿದಂತೆ ಸಂಕಲ್ಪ ಮಾಡಬೇಕು:
+            </div>
+
+            <div class="mantra-box">
+                ಹರಿಃ ಓಂ ತತ್ ಶ್ರೀ ಗೋವಿಂದ ಗೋವಿಂದ ಗೋವಿಂದ |<br>
+                ಅಸ್ಯ ಶ್ರೀ ಭಗವತೋ ಮಹಾಪುರುಷಸ್ಯ ಶ್ರೀ ವಿಷ್ಣೋರಾಜ್ಞಯಾ, ಪ್ರವರ್ತಮಾನಸ್ಯ, ಅದ್ಯ ಬ್ರಹ್ಮಣಃ, ದ್ವಿತೀಯ ಪರಾರ್ಧೇ, ಶ್ರೀ ಶ್ವೇತವರಾಹ ಕಲ್ಪೇ, ವೈವಸ್ವತ ಮನ್ವಂತರೇ, ಕಲಿಯುಗೇ, ಪ್ರಥಮ ಪಾದೇ, ಜಂಬೂ ದ್ವೀಪೇ, ಭಾರತ ವರ್ಷೇ, ಭರತ ಖಂಡೇ, ಶಕಾಬ್ದೇ, ಅಸ್ಮಿನ್ ವರ್ತಮಾನೇನ ವ್ಯಾವಹಾರಿಕೇ ಚಾಂದ್ರಮಾನೇನ ಪ್ರಭವಾದಿ ಷಷ್ಠಿ ಸಂವತ್ಸರಾಣಾಂ ಮಧ್ಯೇ,<br>
+                <span class="highlight-fill">ಶ್ರೀ ಪರಾಭವ ನಾಮ ಸಂವತ್ಸರೇ, ದಕ್ಷಿಣಾಯನೇ, ವರ್ಷ ಋತೌ, ಶ್ರಾವಣ ಮಾಸೇ, ಶುಕ್ಲ ಪಕ್ಷೇ, ಪೌರ್ಣಮಾಸ್ಯಾಂ ಶುಭ ತಿಥೌ, ಬೃಹಸ್ಪತಿ ವಾಸರ ಯುಕ್ತಾಯಾಂ, ಶ್ರವಣ ನಕ್ಷತ್ರ ಯುಕ್ತಾಯಾಂ</span>, ಶುಭ ನಕ್ಷತ್ರ, ಶುಭ ಯೋಗ, ಶುಭ ಕರಣ, ಏವಂ ಗುಣ, ವಿಶೇಷಣ ವಿಶಿಷ್ಟಾಯಾಂ, ಅಸ್ಯಾಂ ಶುಭ ತಿಥೌ, <strong>ನವಕಾಂಡ ಋಷಿ ತರ್ಪಣಂ ಕರಿಷ್ಯೇ</strong>
+            </div>
+
+            <div class="instruction">
+                ಯಜ್ಞೋಪವೀತವನ್ನು ನಿವೀತವಾಗಿ (ಮಾಲೆಯಂತೆ ಕೊರಳಿಗೆ) ಹಾಕಿಕೊಂಡು ಎರಡು ಕೈಗಳಲ್ಲಿಯೂ ನೀರನ್ನು ತೆಗೆದುಕೊಂಡು, ಅದರಲ್ಲಿ ಅಕ್ಷತೆಗಳನ್ನು ತೆಗೆದುಕೊಂಡು, ಈ ಕೆಳಗಿನ ಮಂತ್ರಗಳನ್ನು ಹೇಳಿಕೊಂಡು ಮೂರು-ಮೂರು ಬಾರಿ ನೀರನ್ನು ಕೆಳಕ್ಕೆ ಬಿಡಬೇಕು:
+            </div>
+
+            <ul class="tarpana-list">
+                <li>ಓಂ ಪ್ರಜಾಪತಿಂ ಕಾಂಡ ಋಷಿಂ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ</li>
+                <li>ಓಂ ಸೋಮಂ ಕಾಂಡ ಋಷಿಂ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ</li>
+                <li>ಓಂ ಅಗ್ನಿಂ ಕಾಂಡ ಋಷಿಂ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ</li>
+                <li>ಓಂ ವಿಶ್ವಾನ್ ದೇವಾನ್ ಕಾಂಡ ಋಷಿಂ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ</li>
+                <li>ಓಂ ಸಾಂಹಿತೀ ದೇವತಾ ಉಪನಿಷದಃ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ</li>
+                <li>ಓಂ ಯಾಜ್ಞಿಕೀ ದೇವತಾ ಉಪನಿಷದಃ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ</li>
+                <li>ಓಂ ವಾರುಣೀ ದೇವತಾ ಉಪನಿಷದಃ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ</li>
+                <li>ಓಂ ಬ್ರಹ್ಮಾಣಂ ಸ್ವಯಂಭುವಂ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ</li>
+                <li>ಓಂ ಸದಸ್ಯಸ್ಪತಿಂ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ ತರ್ಪಯಾಮಿ</li>
+            </ul>
+
+            <p>ಆಮೇಲೆ ಯಜ್ಞೋಪವೀತವನ್ನು ಉಪವೀತವಾಗಿ (ಸಾಮಾನ್ಯ ಸ್ಥಿತಿಗೆ) ಹಾಕಿಕೊಂಡು ಆಚಮನ ಮಾಡಬೇಕು.</p>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section">
+            <h3 class="section-title">೪. ಹಳೆಯ ಯಜ್ಞೋಪವೀತ ವಿಸರ್ಜನ</h3>
+            <div class="instruction">
+                ಎರಡು ಬಾರಿ ಆಚಮನ ಮಾಡಿ ಈ ಕೆಳಗಿನ ಮಂತ್ರವನ್ನು ಹೇಳಬೇಕು:
+            </div>
+
+            <div class="mantra-box" style="text-align: center;">
+                <strong>ಉಪವೀತಂ ಛಿನ್ನ ತಂತುಂ ಜೀರ್ಣಂ ಕಶ್ಮಲ ದೂಷಿತಂ |<br>
+                ವಿಸೃಜಾಮಿ ಹರೇ ಬ್ರಹ್ಮನ್ ವರ್ಚೋ ದೀರ್ಘಾಯುರಸ್ತು ಮೇ ||</strong>
+            </div>
+
+            <p>ಎಂದು ಹೇಳಿ ಹಳೆಯ ಯಜ್ಞೋಪವೀತವನ್ನು ಕಳಚಿ ವಿಸರ್ಜನೆ ಮಾಡಬೇಕು.<br>
+            ನಂತರ ಒಂದು ಅಭಿವಾದಯೇ ಮಾಡಿ, ದೇವರಿಗೆ ಹಾಗೂ ಆಚಾರ್ಯರಿಗೆ ನಮಸ್ಕರಿಸಬೇಕು.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        ಶ್ರೀ ಕೃಷ್ಣಾರ್ಪಣಮಸ್ತು | ಸರ್ವೇ ಜನಾಃ ಸುಖಿನೋ ಭವಂತು
+    </div>
+</div>
+
+</body>
+</html>
